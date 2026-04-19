@@ -33,3 +33,6 @@ Thumbs.db
 *.tfstate.backup
 *.tfvars
 .terraform.lock.hcl
+
+# Editor settings
+.vscode/
