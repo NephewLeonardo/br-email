@@ -1,0 +1,2 @@
+-- Opcional para ambiente local.
+-- Crie usuários apenas via frontend/mobile para manter a geração local de chaves.

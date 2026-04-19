@@ -1,0 +1,28 @@
+node_modules/
+dist/
+.expo/
+**/.env
+**/.env.local
+.DS_Store
+coverage/
+terraform.tfstate*
+
+# Ignorar arquivos de ambiente (Segurança)
+backend/.env
+mobile/.env
+.env
+
+# Ignorar dependências (Performance/Organização)
+backend/node_modules/
+mobile/node_modules/
+node_modules/
+
+# Ignorar pastas de build do Android/iOS
+mobile/.expo/
+mobile/android/
+mobile/ios/
+
+# Logs e arquivos do sistema
+*.log
+.DS_Store
+Thumbs.db

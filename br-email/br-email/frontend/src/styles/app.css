@@ -1,0 +1,78 @@
+:root {
+  --bg: #091018;
+  --panel: #121c26;
+  --panel-2: #182635;
+  --text: #e9f1f7;
+  --muted: #96acc2;
+  --primary: #2cd1a1;
+  --danger: #ff7070;
+  --border: rgba(255,255,255,0.08);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: linear-gradient(160deg, #071019, #0f1d2c 45%, #10263a);
+  color: var(--text);
+}
+.page { min-height: 100vh; padding: 24px; }
+.auth-page { display: grid; place-items: center; }
+.app-page {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 240px 320px 1fr;
+}
+.card {
+  background: rgba(18,28,38,.95);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+}
+.hero-card { width: min(520px, 100%); }
+.tabs { display: flex; gap: 8px; margin: 16px 0; }
+.tabs button, button {
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 16px;
+  background: var(--primary);
+  color: #041119;
+  font-weight: 700;
+  cursor: pointer;
+}
+.tabs button.secondary, button.secondary { background: var(--panel-2); color: var(--text); }
+.tabs button.active { outline: 2px solid white; }
+button.danger { color: #fff; background: #6e2a2a; }
+input, textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #0d1721;
+  color: var(--text);
+}
+.stack { display: grid; gap: 12px; }
+.muted { color: var(--muted); }
+.status {
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 12px;
+  background: rgba(44,209,161,.14);
+  border: 1px solid rgba(44,209,161,.35);
+}
+.status.inline { margin-top: 16px; }
+.sidebar { display: grid; gap: 12px; align-content: start; }
+.message-list { display: grid; gap: 10px; max-height: 78vh; overflow: auto; }
+.message-item {
+  text-align: left;
+  display: grid;
+  gap: 4px;
+  background: #0d1721;
+  color: var(--text);
+  width: 100%;
+}
+.viewer { min-height: 78vh; }
+.body-text { white-space: normal; line-height: 1.6; }
+@media (max-width: 960px) {
+  .app-page { grid-template-columns: 1fr; }
+}
